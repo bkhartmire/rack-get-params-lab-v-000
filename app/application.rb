@@ -29,7 +29,7 @@ class Application
         @@cart << search_term
         resp.write "added #{search_term}"
       else
-        resp.write "That item is not currently in stock."
+        resp.write "We don't have that item"
       end
     else
       resp.write "Path Not Found"
