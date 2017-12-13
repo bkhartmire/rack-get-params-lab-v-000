@@ -27,7 +27,7 @@ class Application
 
       if @@items.include?(search_term)
         @@cart << search_term
-        resp.write "#{search_term} is now in your cart"
+        resp.write "added #{search_term}"
       else
         resp.write "That item is not currently in stock."
       end
