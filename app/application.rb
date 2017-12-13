@@ -30,6 +30,7 @@ class Application
         resp.write "#{search_term} is now in your cart"
       else
         resp.write "That item is not currently in stock."
+      end
     else
       resp.write "Path Not Found"
     end
