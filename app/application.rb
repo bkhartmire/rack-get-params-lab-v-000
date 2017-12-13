@@ -24,6 +24,12 @@ class Application
       end
     elsif req.path.match(/add/)
       search_term = req.params["item"]
+
+      if @@items.include?(search_term)
+        @@cart << search_term
+        resp.write "#{search_term} is now in your cart"
+      else
+        resp.write "That item is not currently in stock."
     else
       resp.write "Path Not Found"
     end
